@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout</title>
+    <style>
+        header, nav, main, footer {
+            margin: 1px;  
+            padding:0;
+        }
+
+        body {
+            display: grid;
+            grid-template-areas:
+                "header header header"
+                "nav content content"
+                "footer footer footer";
+            grid-template-rows: 80px 1fr 50px;
+            grid-template-columns: 200px 1fr;
+            height: 100vh;
+        }
+
+        header {
+            grid-area: header;
+            background-color: #d94a69;
+            text-align: center;
+            font-size: 1.5em;
+            color: black;
+        }
+
+        nav {
+            grid-area: nav;
+            background-color: #b0ac6d;
+            font-size: 1.2em;
+            color: black
+            ;
+        }
+        main {
+            grid-area: content;
+            background-color: #d88f5e;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            flex: 1;
+            text-align: justify;
+            color: black;
+        }
+        footer {
+            grid-area: footer;
+            background-color: #50a490;
+            text-align: center;
+            color: black;
+        }
+        hr{
+            color: black;
+            margin: 1px black;
+            width: 190px;
+            height: 5;
+        }
+        body{
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        Header
+    </header>
+
+    <nav>
+        Nav
+    </nav>
+
+    <main>
+        Content
+        <hr>
+        <hr>
+        <hr>
+        <hr>
+        <hr>
+        <hr>
+        <hr>
+        <hr>
+        <hr>
+        <hr>
+        <hr>
+        <hr>
+    </main>
+
+    <footer>
+        Footer
+    </footer>
+</body>
+</html>
