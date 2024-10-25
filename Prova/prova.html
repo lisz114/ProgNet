@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prova</title>
+    <style>
+      
+        .container{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+
+        }
+        @media (max-width: 800px) {
+            .container {
+                flex-direction: column;
+                align-items: stretch; 
+            }
+
+            .japao, .holanda, .italia {
+                min-width: 100%; 
+            }
+        }
+
+        .japao{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-width: 200px;
+            min-height: 33vh;
+            border: 1px solid black;
+            transition-duration: 1s;
+       
+        }
+        .japao:hover{
+            min-width: 50vw;
+            min-height: 50vh;
+            
+        }
+        .circulo{
+            background-color: red;
+            border-radius: 100%;
+            width: 120px;
+            height: 120px;
+        }
+        .holanda{
+           display: grid;
+           grid-template-areas: 
+           "red"
+           "white"
+           "blue";
+            min-width: 200px;
+            min-height: 33vh;
+            border: 1px solid black;
+            transition-duration: 1s;   
+        }
+        .holanda:hover{
+            min-width: 50vw;
+            min-height: 50vh;
+        }
+        .italia{
+            display: grid;
+            grid-template-areas: 
+            "green white red";
+            min-width: 200px;
+            min-height: 33vh;
+            border: 1px solid black;
+            transition-duration: 1s; 
+        }
+        .italia:hover{
+            min-width: 50vw;
+            min-height: 50vh;
+        }
+        .red{
+            background-color: red;
+        }
+        .white{
+            background-color: white;
+        }
+        .blue{
+            background-color: blue;
+        }
+        .green{
+            background-color: green;
+        }
+        .pais {
+            position: absolute;
+            color: white; 
+            background-color: rgba(0, 0, 0, 0.7);
+            opacity: 0;
+        }
+
+        .japao:hover .pais,
+        .holanda:hover .pais,
+        .italia:hover .pais {
+        opacity: 1;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+    <div class="japao">
+        <div class="circulo"></div>
+        <span class="pais">Japão</span>
+    </div>
+    <div class="holanda">
+        <div class="red"></div>
+        <div class="white"></div>
+        <div class="blue"></div>
+        <span class="pais">Holanda</span>
+    </div>
+    <div class="italia">
+        <div class="green"></div>
+        <div class="white"></div>
+        <div class="red"></div>
+        <span class="pais">Itália</span>
+    </div>
+    </div>
+</body>
+</html>
+
+<!--
+
+
+2- A frase está incorreta pois HTML é uma linguagem de marcação e não 
+de programação. Css é uma folha de estilo e não uma linguagem de programação.
+
+3-a) Arquivo Separado, Dentro do Head e Dentro de uma tag
+b) Seletores selecionam os elementos que serão estilizados, por exemplo
+o seletor de classe "class="xyz"" no style: .xyz{ color: black}, todo
+elemento que estiver com a classe xyz tera a cor preta. 
+
+c)Inline: Posiciona os elementos em linha, ocupam apenas a largura e altura
+do elemento selecionado por isso geralmente esses elementos ficam um do lado 
+do outro.
+Block: Posiciona os elementos em bloco, ocupando toda a largura do viewport,
+por isso geralmente ficam um em baixo do outro.
+Inline-Block: Mistura dos dois-->
