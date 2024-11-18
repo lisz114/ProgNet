@@ -1,0 +1,116 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        body {
+            display: flex;
+            margin: 0; 
+            background-color: burlywood;
+        }
+
+        #container{
+            display: grid;
+            height: 100vh;
+            width: 100vw;
+            grid-template-columns: 1fr 3fr;
+            grid-template-rows:1fr 4fr 1fr;
+        }
+
+        #header{
+            grid-column:span 2;
+            justify-content: center;
+            text-align: center;
+        }
+
+        #nav{
+            grid-row:span 2;
+            border-radius: 10%;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #content{
+            background-color: rgb(255, 226, 187);
+            border:1px solid black;
+        }
+
+        #footer{
+            border: 1px solid black;
+        }
+        #chat{
+            position:fixed;
+            bottom: 0;
+            right:0;
+            height: 40%;
+            width: 30%;
+            background-color: rgba(212, 138, 106, 0.822);
+            border-radius: 1cap;
+            border: 1px solid black;
+        }
+        .botao{
+            justify-content: center;
+            border-radius: 10%;
+            align-items: center;
+        }
+        .box{
+            margin: 5px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div id="container">
+        <div id="header">Delivery de Pizzas</div>
+
+        <div id="nav">
+        <h2>Menu</h2>
+       <p>Pizzas</p>
+       <p>Bebidas</p>
+       <p>Sobre nós</p>
+    </div>
+        <div id="content">
+            <h1>Pizzas</h1>
+            <div class="box">
+                <label for="nomepizza">Pizza calabresa</label>
+                <label for="preco">50R$</label>
+                <input type="button" value="Pedir">
+            </div>
+            <div class="box">
+                <label for="nomepizza">Pizza frango</label>
+                <label for="preco">50R$</label>
+                <input type="button" value="Pedir">
+        </div>
+        <div class="box">
+            <label for="nomepizza">Pizza queijo</label>
+            <label for="preco">50R$</label>
+            <input type="button" value="Pedir">
+        </div>
+        </div>
+        <div id="chat">
+        <h3> Peça sua Pizza:</h3>
+        <label for="sabor">Sabor:</label>
+        <select name="sabores" id="sabores">
+            <option value="calabresa">Calabresa</option>
+            <option value="frango">Frango</option>
+            <option value="queijo">Queijo</option>
+        </select>
+        <label for="tamanho">Tamanho:</label>
+        <select name="tamanho" id="tamanho">
+            <option value="grande">Grande</option>
+            <option value="media">Média</option>
+            <option value="pequena">Pequena</option>
+        </select>
+        <input class="botao" type="submit" value="Confirmar Pedido">
+        </div>
+
+        <div id="footer">Peça já a sua!</div>
+    </div>
+    
+</body>
+</html>
