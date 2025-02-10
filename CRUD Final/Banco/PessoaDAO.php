@@ -1,11 +1,13 @@
 <?php 
     include_once("Database.php");
     
+//função de salvar um novo usuario      
     function save($nome, $email, $usuario, $senha) {
         $db = conecta();
     
         $sql = "insert into usuario (nome, email, usuario, senha) values (?, ?, ?, ?)";
-    
+
+        // Liga os valores das variáveis aos parâmetros da consulta SQL
         $stmt = $db->prepare($sql);
         $stmt->bindValue(1, $nome);
         $stmt->bindValue(2, $email);
@@ -14,12 +16,13 @@
         $stmt->execute();
     }
     
-
+ // Função para buscar todos os usuários da tabela 'usuario'    
     function getUsuarios(){
         $db =conecta();
         $sql = "select * from usuario";
         $stmt = $db->prepare($sql);
         $stmt->execute();
+// Recupera todos os resultados como um array associativo
         $resultado = $stmt->fetchALL(PDO::FETCH_ASSOC);
         return $resultado;
     }
@@ -40,6 +43,7 @@
         }
     }
     
+// Buscando usuário pelo seu ID
     function getUsuario($id){
         $db =conecta();
         $sql = "select * from usuario where idusuario = ?";
@@ -49,6 +53,8 @@
         $usuario = $stmt->fetch(PDO::FETCH_ASSOC);
         return $usuario;
     }
+
+// Deletando usuario
     function deletUsuario($id){
         $db = conecta();
         $sql = "DELETE FROM usuario WHERE idusuario = ?";

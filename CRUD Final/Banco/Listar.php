@@ -7,7 +7,7 @@
     <style>
         table {
             width: 100%;
-            border-collapse: collapse;
+            border-collapse: collapse;  
         }
         th, td {
             border: 1px solid black;
@@ -15,10 +15,30 @@
             padding: 10px;
         }
         th {
-            background-color:white;
+            background-color:#c97190;
         }
         td {
             height: 50px;
+        }
+        h2 {
+            color:#db6e94;
+        }
+        .btn-cadastrar {
+            position: fixed;
+            bottom: 20px; 
+            right: 20px;
+            background-color: #c97190;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .btn-cadastrar:hover {
+            background-color: #4caf93;
         }
     </style>
 </head>
@@ -54,12 +74,15 @@
                 <td><?php echo $pessoa['email']; ?></td>
                 <td><?php echo $pessoa['usuario']; ?></td>
                 <td><?php echo $pessoa['senha']; ?></td> 
-                
             </tr>
         <?php
         }
         ?>
     </table>
+
+    <a href="Cadastrar.php">
+        <button class="btn-cadastrar">Cadastrar Novo Usuário</button>
+    </a>
 
 </body>
 </html>

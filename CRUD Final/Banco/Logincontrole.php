@@ -11,9 +11,9 @@ if (!file_exists($pathPessoaDAO)) {
 include_once($pathPessoaDAO); //Inclui o arquivo PessoaDAO.php para usar suas funções e classes (Import do java )
 
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+if ($_SERVER['REQUEST_METHOD'] === 'POST') { // Verifica se a requisição HTTP foi feita via método POST (indicando que o formulário foi enviado)    
     
-    $usuario = $_POST['usuario'] ?? '';
+     $usuario = $_POST['usuario'] ?? '';
     $senha = $_POST['senha'] ?? '';
 
     
@@ -29,11 +29,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $resultado = login($usuario, $senha);
 
-    if ($resultado) {
+    if ($resultado) {  // Verifica se a função 'login' retornou um resultado válido (indicando que o usuário foi encontrado)    
         
         $_SESSION['usuario_id'] = $resultado['idusuario']; 
         $_SESSION['usuario_nome'] = $resultado['nome'];
-        header("Location: Listar.php");
+        header("Location: Listar.php"); // Redirecionando o usuário 
         exit();
     } else {
         
