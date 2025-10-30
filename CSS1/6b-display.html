@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>6b-display.html</title>
+    <style>
+        *{
+            bottom: 0px;
+            margin: 0px;
+        }
+
+        .container{
+            display: flex;
+            justify-content: space-between;
+            /*width: 100%; /*faz ocupar a largura da tela*/
+            /*height: 130px;/*define altura dos blocos*/
+        }
+
+        .box{
+            display: flex;
+            position: static;
+            height: 100px;
+            width: 100%;
+
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+        }
+
+        #box1{
+            background-color: blue;
+            position: relative;
+        }
+        #box2{
+            background-color: green;
+            position: relative;
+        }
+        #box3{
+            background-color: red;
+            position:  relative;
+        }
+        #box4{
+            background-color: yellow;
+            position: relative;
+        }
+
+
+
+
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+    <div id="box1" class="box">1</div>
+    <div id="box2" class="box">2</div>
+    <div id="box3" class="box">3</div>
+    <div id="box4" class="box">4</div>
+</div>
+    
+</body>
+</html>

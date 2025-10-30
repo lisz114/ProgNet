@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 4</title>
+    <style>
+
+        /*Atividade 4 – Seja o trecho de código HTML e CSS da figura a seguir e explique porque cada regra foi aplicada em cada item.*/
+
+
+        /*regra 1*/ li{color:red;}
+        /*Essa regra define todos os itens da lista (<li>) com a cor vermelha, para todos os 8 <li> inicialmente*/
+
+        /*regra 2*/ .churras{color:green;}
+        /*Define que todo elemento com a classe “churras” terá a cor verde, como os itens 6, 7 e 8, essa regra sobrescreve a cor vermelha da regra 1, porque uma classe é mais específica que o seletor de tag.*/
+
+        /*regra 3*/ .fruta{color:gray}
+        /*Define que todo elemento com a classe “fruta” terá a cor cinza, como os itens 2, 3, 4 e 5*/
+
+        /*regra 4*/ li+li.churras{color: black;}
+        /*faz com que o li que vier imediatamente após outro li com a classe churras fique preto.*/
+
+
+        /*regra 5*/ .churras[draggable="true"]{color: magenta;}
+        /*Aplica a cor magenta em qualquer elemento com a classe .churras e o atributo draggable="true".*/
+
+        /*regra 6*/ #lip1,#lip2,#lip3{color:blue}
+        /*Seleciona os elementos com IDs lip1, lip2 e lip3 e aplica a cor azul.*
+        
+        
+        /*regra 7*/ #lip3.fruta{color:orange}
+        /*Esse seletor combina ID + classe, o que aumenta a especificidade.
+        Aplica laranja apenas em quem tiver id="lip3" e class="fruta".*/
+
+        /*regra 8*/ ol>li.churras#lip5{color:purple}
+        /*Aplica roxo a um <li> que está diretamente dentro de um <ol> (por causa do >), tem a classe “churras”, e o ID “lip5”. Neste caso, não afeta ninguém pois não existe um <li id="lip5"> no código.*/
+
+
+    </style>
+</head>
+<body>
+    <ol>
+        <!--item 1--> <li id="lip0">Abacaxi</li>
+        <!--item 2--> <li           class="fruta">Melão</li>
+        <!--item 3--> <li id="lip2" class="fruta">Pera</li>
+        <!--item 4--> <li id="lip3" class="fruta">Uva</li>
+        <!--item 5--> <li id="lip4" class="fruta">Maçã</li>
+        <!--item 6--> <li           class="churras">Carne</li>
+        <!--item 7--> <li           class="churras">Linguiça</li>
+        <!--item 8--> <li id="lip7" class="churras" draggable="true">Pão de alho</li>
+    </ol> 
+</body>
+</html>

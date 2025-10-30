@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>ATIVIDADE 2</title>
+	<style>
+		img{
+
+			width: 300px;
+			padding: 20px;
+		}
+
+		.img1{
+			float: right;
+			width: 300px;
+			padding: 20px;
+		}
+
+	</style>
+</head>
+<body>
+	<h1>O que é HTTP?</h1>
+	
+		<div class="img1"><img src="/img/http.jpg" alt="Imagem 1"></div>
+		
+
+		<p><strong>HTTP</strong> significa <mark>HyperText Transfer Protocol</mark>, ou em português, Protocolo de 
+		<mark>Transferência de Hipertexto</mark>. Ele é como uma língua comum que os computadores usam 
+		para se comunicarem na internet.</p>
+
+		<h4>Como funciona?</h4>
+		<p>Quando você entra em um site, por exemplo o <a href="https://www.google.com">www.google.com</a> o que acontece é:</p>
+		<ul>
+			<li>Seu navegador envia um pedido/requisiçãopara o servidor do Google. <br>E este pedido segue as regras do protocolo HTTP.</li>
+			<li>O servidor do google recebe esta requisição, procura a página que você pediu e envia de volta a resposta.</li>
+			<li>Essa resposta chega ao seu navegador, que mostra o site na tela.</li>
+			<li>O navegador interpreta o conteúdo e exibe a página.</li>
+			<li>O HTTP serve para enviar e receber informações como: textos, imagens, sons, formulários, dados de uma página web</li>
+		</ul>
+
+		<span>Observação: O HTTPS é uma versão segura do HTTP, isso significa que os dados enviados entre você e o site são criptografados.</span>
+
+		<p>O uso do HTTP é um ciclo: <br>Usuário → Navegador → Requisição HTTP → Servidor Web → Resposta HTTP → Página exibida</p>
+
+		<hr>
+
+		<h2>Requisição</h2>
+		
+		<img src="/img/rquest.png" alt="Request">
+
+		
+
+		<p>Uma requisição HTTP é o que o navegador envia para o servidor.</p>
+		<p>É o pedido que o navegador (cliente) faz ao servidor.
+		Ele está dizendo: "Oi, servidor, me manda esse arquivo chamado /index.html, por favor."</p>
+		 
+		<pre>
+			&lt;GET /index.html HTTP/1.1 <!--O navegador está pedindo o recurso /index.html-->
+			&lt;Host: www.exemplo.com <!--Informa qual site o navegador quer acessar-->
+			&lt;User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64)<!--Diz ao servidor qual navegador e sistema o cliente está usando.-->
+			&lt;Accept: text/html,application/xhtml+xml<!--Diz que o cliente aceita receber respostas em formato HTML-->
+			&lt;Accept-Language: pt-BR
+			&lt;Connection: keep-alive <!--Pede para manter a conexão aberta (ao invés de fechar após a resposta).-->
+		</pre>
+
+		<h2>Response</h2>
+		<img src="/img/rquest.png" alt="Request">
+
+
+
+		<p>Depois que o servidor processa o pedido, ele responde algo assim:</p>
+		<p>É o retorno que o servidor envia ao cliente depois de processar o pedido.
+		Ele está dizendo: "Aqui está o que você pediu!"</p>
+		
+		<pre>
+			&lt;HTTP/1.1 200 OK <!--Indica que o pedido foi bem-sucedido. O status 200 OK é o código de sucesso.-->
+			&lt;Content-Type: text/html <!--O conteúdo da resposta é uma página HTML.-->
+			&lt;Content-Length: 1270 <!--O tamanho do conteúdo retornado.-->
+			<br>
+			&lt;html>
+				&lt;head><title>Example</title></head>
+				&lt;body>Hello World</body>			
+			&lt;/html>
+			<!--Conteudo que a pagina retorna-->
+		</pre>
+
+
+
+
+	</body>
+</html>

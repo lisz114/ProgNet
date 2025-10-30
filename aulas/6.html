@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{ /*flex utiliza regras diferentes*/
+            display: flex; 
+            flex-direction: row; /*faz os blocos se posicionarem ao lado*/
+            justify-content: space-between; /*posiciona ao eixo vertical (acopanha o fluxo do  flex-direction)*/
+            align-content: center; /*controla o espaçamento entre as linhas */
+            align-items: center; /*alinha ps itens a linha, posiciona ao eixo vertical(neste caso que está em row*/
+            border: 1px solid magenta; /*faz a borda*/
+            flex-wrap: wrap; /*para quebrar linha
+            
+            wrap reverse joga para cima*/
+
+            /*definindo altura container*/
+            height: 100vh; /*vw em relação a largura do viewport largura da tela - vh 100% do viewport (do tamanho da tela)*/
+
+          
+        } 
+
+        .box{
+            flex-shrink: 0;
+        }
+
+        .box{border: 1px solid #AAAAAA;
+            display: block; /*fica abaixo um do outro*/
+            width: 100px; /*tamanho box da div*/
+            height: 100px;
+        }
+
+        #box2{
+
+            flex-shrink: 0; /*permite controlar o quanto o item vai ceder */
+
+            /*flex-grow: 3; /*preenche esta parte do espaço que sobrouda linha*/
+        }
+
+        #box3, #box4{
+           /* flex-grow: 1;*/
+        }
+
+    </style>
+</head>
+<body>
+    <!--div.container>div#box$.box{$}*5
+
+     <div class="container">
+        <div id="box1" class="box">1</div>
+        <div id="box2" class="box">2</div>
+        <div id="box3" class="box">3</div>
+        <div id="box4" class="box">4</div>
+        <div id="box5" class="box">5</div>
+     </div>-->
+
+     <div class="container">
+        <div id="box1" class="box">1</div>
+        <div id="box2" class="box">2</div>
+        <div id="box3" class="box">3 AAAAAA</div>
+        <div id="box4" class="box">4</div>
+        <div id="box5" class="box">5</div>
+        <div id="box6" class="box">6</div>
+        <div id="box7" class="box">7</div>
+     </div>
+    
+</body>
+</html>
