@@ -1,0 +1,128 @@
+/*para  vincular a outros arquivos, tem que usar a tag
+<link rel="stylesheet" href="style.css">
+dentro do head do arquivo */
+
+
+
+
+
+body {
+    background-color: #f4f6fa;    
+    color: #333;
+    font-family: Arial, sans-serif;
+    margin: 30px;
+}
+
+
+h1, h2, h3 {
+    color: #2c3e50;
+}
+
+a {
+    color: blue;
+    text-decoration: none; /**/
+}
+
+a:hover { /*hover, é quando o mouse está em cima, no caso*/
+    color: darkblue; /*mmuda cor teto para vermelho*/
+    text-decoration: underline;  /*adiciona sublinhado quando passa por cima*/
+}
+
+ /*nav é o menu das opções*/
+nav ul {
+    padding: 0; /*espaçamento*/
+}
+
+nav li {
+    display: inline-block; /* faz com que os li fiquem ao lado*/
+}
+
+nav a {
+    background-color: #a6c1ee;
+    color: black;
+    padding: 5px 5px;
+}
+
+nav a:hover {
+    background-color: #dfe7f2;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 15px; /*da espaço entre a tabela e o texto acima*/
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 8px; /* espaço para o texto nao grudar nas bordas */
+    text-align: left;  /*texto alinhado a esquerda*/
+}
+
+th {
+    background-color: #a6c1ee;
+}
+
+td {
+    background-color: #dfe7f2;
+}
+
+form {
+    background-color: white;
+    padding: 40px;
+    border-radius: 7px; /*bordas arredondadas*/
+    width: 350px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1); /*sombra*/
+}
+
+label { /*fonte diferente para o texto do label*/
+    font-weight: bold;
+}
+
+input[type="text"], input[type="email"], select, textarea {
+
+    width: 93%;
+    padding: 10px;
+    border: 1px solid grey; /*cor borda*/
+    border-radius: 6px; /* bordas arredondadas */
+    margin-top: 15px; /*espaço acima campos*/
+}
+
+.botao{
+    background-color: #0055cc;
+    color: white;
+    border: none; /*fica sem borda*/
+    border-radius: 6px; /*cantos arredondados*/
+    padding: 10px 16px; /*tamanho botao*/
+    cursor: pointer; /*muda o cursor para maozinha*/
+}
+
+.botao:hover {
+    background-color: #003b8f; /* muda cor no hover */
+}
+
+
+/*seção que estava no meu curriculo antes*/
+section {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0px 3px 10px rgba(0,0,0,0.1);
+}
+
+/*a imagem a direita do meu curriculo*/
+img {
+    float: right;
+    width: 180px;
+    border-radius: 8px;
+    margin-left: 15px;
+}
+
+
+footer { /*rodape*/
+    text-align: center; /*alinha textos ao centro*/
+    font-size: 14px;
+    margin-top: 20px; /*espaçamento entre os outros elementos*/
+    color: black;
+}

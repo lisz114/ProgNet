@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 4</title>
+
+    <style>
+
+        table, th, td{
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+<body>
+    <h1>Formulários</h1>
+    <p>O HTML possui a tag que possibilita definir formulários 
+        para a submissão de dados informados pelo usuário por meio
+        de campos input, dentro do formulario. A tag &lt;form&gt possui além
+        dos atributos globais e também atributos action="url", 
+        utilizado para definir o destino dos dados submetidos.
+        <span>Exemplo: </span> 
+        <pre>
+            &lt;form action="url">
+                &lt;input type="text" name="variavelA        
+            &lt;/form>"
+        </pre>
+
+        <h1>Table</h1>
+        <p>A tag table é utilizada para definição da tabela no HTML,
+            internamente em uma tabela podemos criar linhas 
+            "rows" utilizando a tag &lt;tr> e celulas dentro das linhas utilizando a tag &lt;td> 
+            <span>Exemplo: </span> </p>
+
+        <pre>
+            &lt;table>
+                &lt;tr>
+                    &lt;td: Celula 1x1 &lt;td> Celula 1x2 &lt;/td>
+                &lt;tr>
+                &lt;tr>
+                    &lt;td: Celula 2x1 &lt;td> Celula 2x2 &lt;/td>
+                &lt;tr>
+             &lt;table>
+        </pre>
+        <span>O código anterior define a tabela abaixo: </span>
+
+        <table>
+            <tr>
+                <td>Celula 1x1</td> <td>Celula 1x2</td>
+            </tr>
+            <tr>
+                <td>Celula 2x1</td> <td>Celula 2x2</td>
+            </tr>
+        </table>
+
+
+        <p>Além </p>
+
+         <!--table>(tr>{bla}td*2)*2    || da para criar tabela assim também-->
+
+         <table>
+            <tr>
+                <td rowspan="1">Categoria</td>
+                <td>Item</td>
+                <!--vai ocupar duas colunas-->
+                <td colspan="2">Item churras</td>
+                <td>quantidade</td>
+            <!--<td>blablabla</td>-->
+            </tr>
+            <tr>
+                <td rowspan="2">Carnes</td>
+                <td>1</td>
+                <td>Carne</td>
+                <td>5kg</td>
+                <td>R$200</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Frango</td>
+                <td>2kg</td>
+                <td>R$40</td>
+            </tr>
+            <tr>
+                <td rowspan="1">Bebida</td>
+                <td>3</td>
+                <td>Cachaça</td>
+                <td>2L</td>
+                <td>R$129</td>
+            </tr>
+            <tr>
+                <td rowspan="1">Pão</td>
+                <td>4</td>
+                <td>Pão de Alho</td>
+                <td>10 u.</td>
+                <td>R$12</td>
+            </tr>
+         </table> 
+    </p>
+</body>
+</html>
