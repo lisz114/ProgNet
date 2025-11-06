@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML novo</title>
+
+    <style>
+        img{width: 300px;
+            border-radius: 50%;
+        }
+        p{color: blue;}
+
+        h1{color: red;}
+
+        ul{background-color: rgb(116, 170, 95); 
+        padding: 20px;}
+        
+        table, td, th{border: 1px solid black;
+                border-collapse: collapse;
+            }
+
+    </style>
+</head>
+<body>
+    <!-- Isto é um comentario -->
+  
+    <p>isto é umparagrafo</p>
+
+    <span>Isto é so um texto</span>
+
+    <hr>
+    <h1>TAGS TEXTO</h1>
+
+    <p>Lorem, 
+        <!--EM marca-->
+        <em>ipsum</em> dolor sit amet 
+        <!--STRONG negrito-->
+        <strong>consectetur</strong> adipisicing elit. 
+        <!--sub abaixo | sup acima-->
+        10<sub>2</sub>=2<sub>10</sub> 
+        <!--mark marca texto-->
+        <mark>Vel, quisquam ducimus itaque iste repudiandae 
+        brnumquam explicabo </mark>
+        <br>
+        <sub>repellat</sub> <sup>architecto</sup> veritatis supprovident sapiente dolore hic ullam eius aliquid repellendus?
+    Voluptates, vel nihil!</p>
+    
+
+
+
+    <ul>
+        <li>git init - cria um repositório  git em um diretório</li>
+        <li>git add - adiciona as modificações do workcopy worktre a stage</li>
+        <li>git commit -m "asd" - cria um commit apartir do stage</li>
+        <li>git log - exibe os commits do repositório local</li>
+        <li>git status - exibe o status do  <strong>WK</strong></li>
+        <li>git checkout -b  nova branch branch|hash - cria uma nova branch apontando para a branch ou hash informado</li>
+        <li>git reset --hard - restaura os arquivos trakeads ao estado do HEAD</li>
+        <li>remote branch </li>
+        <li>git config user.name="ISABELLE"</li>
+        <li>git config user.email="Email@email.com"</li>
+        <li> git clone url - faz o clone de um repositório</li>
+    </ul>
+
+
+
+
+    <h1>Titulo 1</h1>
+    <h2>Titulo 2</h2>
+    <h3>titulo 3</h3>
+    <h4>titulo 4</h4>
+    <h5>titulo 5</h5>
+    <h6>titulo 6</h6>
+    <p>isto é um paragrafo</p>
+    <hr>
+
+
+
+
+    <h1>Listas</h1>
+    <p>O html possui listas não ordenadas e listas ordenadas, as listas não ordenadas são definidas coma tag &lt;ul&gt; enquanto usamos  o &lt;ol&gt; para listas ordenadas</p>
+
+    <ul>
+        <li>Panqueca</li>
+        <li>Banana</li>
+        <li>Açai</li>
+        <li>maça</li>
+    </ul>
+
+    <!--da para colocar estes parametros para ver a forma de como e onde iniciar
+    start -> de que numero começa || type -> tipo do tópico-->
+    <ol start="5" type="I">
+        <li>Panqueca</li>
+        <li>Banana</li>
+        <li>Açai</li>
+        <li>maça</li>
+    </ol>
+
+    <ol type="I">
+        <li>Hoje</li>
+        <li>Amanhã</li>
+        <li>Ontem</li>
+    </ol>
+
+    <br>
+
+    <dl>
+        <dt>Chocolate</dt>
+        <dd>Fundamental</dd>
+        <dt>Porco</dt>
+        <dd>é um animal</dd>
+        <dt>Café</dt>
+        <dd>Bebida fundamental a vida</dd>
+        <dt>Arroz</dt>
+        <dd>Comida rápida</dd>
+    </dl>
+    <hr>
+
+
+
+    <h1>TAGS PARA LINKS E IMAGENS</h1>
+
+    <!--bota palavra com links-->
+    <a href="https://www.google.com"> Google abrindo na mesma página </a>
+    <br>
+    <a target="_blank" href="https://www.google.com"> Google abrindo em guia nova</a>
+    <br>
+    <a href="https://www.google.com/search?q=powerrangers">Link Power Rangers</a>
+    <br><br>
+
+
+    <!-- adicionar dentro das " ./ "-->
+    <img src="./img/cafe.JPG" alt="Imagem café vinda salvando">
+    <br>
+    <img src="https://static.mundoeducacao.uol.com.br/mundoeducacao/2022/05/2-sol.jpg" alt="Imagem Sol vinda com o link ">
+
+    <br><br><br>
+    <hr>
+
+    <h1>Tabelas no html</h1>
+
+    <table> <!--cria tabela-->
+        <tr> <!--cria linha - trows-->
+            <th>Nome</th> <!--cria coluna - thead-->
+            <th>Idade</th>
+            <th>Sexo</th>
+        </tr>
+        <tr>
+            <td>Joao</td>
+            <td>21</td>
+            <td>Masculino</td>
+        </tr>
+        <tr>
+            <td>Pedro</td>
+            <td>22</td>
+            <td>Masculino</td>
+        </tr>
+        <tr>
+            <td>Isabelle</td>
+            <td>18</td>
+            <td>Feminino</td>
+    </table>
+
+
+    <br><br>
+    <hr>
+
+
+    <h1>FORMULÁRIOS</h1>
+
+    <form action="https://google.com/search">
+
+        <input type="text" value="" placeholder="Entre com seu nome">
+        <br>
+        <label for="CAMPOINPUT">Query de busca: </label>
+        <input id="CAMPOINPUT" name="q" type="date" draggable="true" value="2021-01-25">
+        
+        <input type="submit" value="Buscar">
+
+        <!--label for="este campo de busca se refere a este query de busca"-->
+        <!--input id ="nao pode ser repetido" name="nome da variavel que vai permitir a busca" type="tipo do atributo aonde vai ser inserido os dados: color, checkbox, date,"-->
+        <!--input -->
+    </form>
+    
+</body>
+</html> 

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posicionamento</title>
+    <style>
+        *{border: 1px solid black;}
+        
+        img{
+            float: left;
+            width: 400px;
+        }
+        .box{
+            display: inline-block; /*permite os elementos da box ficarem ao lado*/
+            /*inline-block da para definir a altura e largura*/
+            width: 100px;
+            height: 100px;
+            position: static;
+            border: 2px solid green;
+        }
+
+        #box2{
+            position: relative;
+            top: 100px;
+        }
+
+        #box3{
+            background-color: bisque;
+            position: absolute; /*posicionam ao começo*/
+            top: 1px;
+            left: 10px;
+        }
+
+        #box4{
+            position: fixed;
+            background-color: aqua;
+           /* bottom: 50%;/*bota o box aonde quer*/
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%); /*faz ficar ao centro*/
+
+            z-index: 1; /*controla as camadas, bota para baixo o -1, bota pra cima 1*/
+
+        }
+
+        .container{
+            position: relative;
+            border: 2px solid yellow;
+        }
+
+        html, body{border-color: red;}
+        
+
+    </style>
+
+</head>
+<body>
+
+    <h3>POSITIONS</h3>
+    <p>Position: relative se relaciona a coordenada estatica dele </p>
+    <p>Position: absolute, se posicione ao seu primeiro ancestral não estatico exemplo box3</p>
+    <p>Position: Fixed posiciona ao viewport do navegador, onde esta esta margem vermelha</p>
+    <p>Para posicionar em qualquer canto da página</p>
+    <p>Static: ficam um ao lado do outro cim display inlineblock</p>
+    <p>Medida em % vem em relação ao pai do elemento</p>
+
+    <hr>
+    <p>Display: block abaixo, inline block ao lado (se comportam com o texto), inline em relação ao que está dentro</p>
+
+    <h1>Titulo blabla</h1>
+   
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem consequuntur quam ex numquam commodi eaque aliquam blanditiis obcaecati hic assumenda quisquam in mollitia porro explicabo, quia maxime? Aliquid, molestiae fuga? Lorem ipsum dolor sit amet consectetur adipisicing elit. Error minus ad suscipit iusto explicabo nihil, ipsum officiis, perferendis distinctio aperiam perspiciatis natus consequuntur cum deleniti ullam! Sapiente nisi a facere. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia, in placeat! Vitae neque, nulla error sed fugiat sunt mollitia. Rem quidem officia perferendis laboriosam, molestias iste a fugit ipsum et?</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem consequuntur quam ex numquam commodi eaque aliquam blanditiis obcaecati hic assumenda quisquam in mollitia porro explicabo, quia maxime? Aliquid, molestiae fuga? Lorem ipsum dolor sit amet consectetur adipisicing elit. Error minus ad suscipit iusto explicabo nihil, ipsum officiis, perferendis distinctio aperiam perspiciatis natus consequuntur cum deleniti ullam! Sapiente nisi a facere. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia, in placeat! Vitae neque, nulla error sed fugiat sunt mollitia. Rem quidem officia perferendis laboriosam, molestias iste a fugit ipsum et?</p>
+
+    <span>Lorem</span>
+
+    <img src="./img/Sol.webp" alt="">
+
+    <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi sunt, non qui distinctio hic quas voluptatibus labore eaque adipisci eius quo impedit, debitis doloremque odit! Veniam error aliquid debitis architecto. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed tempora, totam optio accusantium rem reiciendis nemo aliquam, doloribus unde impedit ea? Atque dicta adipisci provident labore accusamus quisquam inventore praesentium!</span>
+    
+
+    <!--div#box5.(box$)*5
+    <div id="box5" class=""></div>
+    <box1></box1>
+    <box2></box2>
+    <box3></box3>
+    <box4></box4>
+    <box5></box5>-->
+
+    <div class="container">
+        <div id="box1" class="box">box1</div>
+        <div id="box2" class="box">box2</div>
+        <div id="box3" class="box">box3</div>
+        <div id="box4" class="box">box4</div>
+        <div id="box5" class="box">box5</div>
+
+    </div>
+
+</body>
+</html>
